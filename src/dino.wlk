@@ -93,7 +93,7 @@ object dino {
 	method saltar(){
 		self.subir()
 		game.schedule(velocidad*2,{=>self.bajar()})
-	}
+}
 	
 	method subir(){
 		position = position.up(1)

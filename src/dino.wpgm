@@ -6,5 +6,5 @@ program dinosaurio {
 	juego.configurar()
 	juego.iniciar()
 	game.start()
-
+	
 }
