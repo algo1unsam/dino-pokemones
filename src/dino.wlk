@@ -59,14 +59,16 @@ object reloj {
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
-		//COMPLETAR
+		if(dino.estaVivo()) {
+			tiempo+=1
+		}
 	}
 	method iniciar(){
 		tiempo = 0
 		game.onTick(100,"tiempo",{self.pasarTiempo()})
 	}
 	method detener(){
-		//COMPLETAR
+		game.removeTickEvent("tiempo")
 	}
 }
 
@@ -113,7 +115,8 @@ object dino {
 	method position() = position
 	
 	method saltar(){
-		//COMPLETAR
+		self.subir()
+		game.schedule(120,{=>self.bajar()})
 	}
 	
 	method subir(){
