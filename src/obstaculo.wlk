@@ -36,4 +36,4 @@ object cactus {
     	dino.morir()
 		game.schedule(2000, { game.stop() })
 	}
-}
+}//
