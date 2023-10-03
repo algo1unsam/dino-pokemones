@@ -1,5 +1,5 @@
 import wollok.game.*
-    
+import obstaculo.*
 const velocidad = 250
 
 object juego{
@@ -70,31 +70,7 @@ object reloj {
 	}
 }
 
-object cactus {
-	 
-	var position = self.posicionInicial()
 
-	method image() = "cactus.png"
-	method position() = position
-	
-	method posicionInicial() = game.at(game.width()-1,suelo.position().y())
-
-	method iniciar(){
-		position = self.posicionInicial()
-		game.onTick(velocidad,"moverCactus",{self.mover()})
-	}
-	
-	method mover(){
-		//COMPLETAR
-	}
-	
-	method chocar(){
-		//COMPLETAR
-	}
-    method detener(){
-		//COMPLETAR
-	}
-}
 
 object suelo{
 	
