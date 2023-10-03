@@ -113,6 +113,7 @@ object dino {
 		return vivo
 	}
 }
+
 object cactus {
 	 
 	var position = self.posicionInicial()
